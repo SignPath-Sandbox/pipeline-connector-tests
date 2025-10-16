@@ -1,0 +1,46 @@
+name: workflow
+
+on:
+    workflow_dispatch:
+
+env:
+  CONNECTOR_URL: https://jlktkgvg-7199.euw.devtunnels.ms/
+  ENDPOINT_KEY: GitHubCom 
+  ORG_ID: 6b02b2c3-392e-4474-b1d2-62a5a08921d8
+  INPUT_ARTIFACT: ./script.ps1
+  OUTPUT_PATH: signed-artifact
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Upload the artifcat file
+        id: upload-artifact-step
+        uses: actions/upload-artifact@v4
+        with: 
+          name: original-artifact
+          path: ${{ env.INPUT_ARTIFACT }}
+      - name: Run submit signing request
+        id: submit_with_download
+        uses: signpath/github-action-submit-signing-request@main
+        with:
+            connector-url: ${{ env.CONNECTOR_URL }}/GitHubActions/${{ env.ENDPOINT_KEY }}
+            api-token: dummy
+            organization-id: ${{ env.ORG_ID }}
+            project-slug: dummy
+            # this SigningPolicy has auto-approve enabled, so you don't need to approve the signing request
+            signing-policy-slug: dummy
+            artifact-configuration-slug: dummy
+            github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
+            wait-for-completion: true
+            output-artifact-directory: ${{ env.OUTPUT_PATH }}
+      - name: Upload the signed artifact
+        id: upload-signed-artifact-step
+        uses: actions/upload-artifact@v4
+        with: 
+            name: signed-artifact
+            path: ${{ env.OUTPUT_PATH }}
+      - run: |
+          echo "Signed Artifact Id: ${{ steps.upload-signed-artifact-step.outputs.artifact-id }}"
