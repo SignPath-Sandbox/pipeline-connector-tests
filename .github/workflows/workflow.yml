@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
 
 env:
-  CONNECTOR_URL: https://jlktkgvg-7199.euw.devtunnels.ms
+  CONNECTOR_URL: https://9rmqsklr-7199.euw.devtunnels.ms
   ENDPOINT_KEY: GitHubCom 
   ORG_ID: 6b02b2c3-392e-4474-b1d2-62a5a08921d8
   INPUT_ARTIFACT: ./script.ps1
