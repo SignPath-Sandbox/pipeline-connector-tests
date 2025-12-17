@@ -2,6 +2,12 @@ name: workflow
 
 on:
     workflow_dispatch:
+    
+permissions: 
+    actions: read
+    contents: read
+    artifact-metadata: read
+    repository-projects: read
 
 env:
   CONNECTOR_URL: https://pipelineconnector-dev6.connectors.dev.signpath.io:15001
