@@ -1,2 +1,3 @@
 github-actions-policies:
   key: value-from-scm-repo
+  fail: true
