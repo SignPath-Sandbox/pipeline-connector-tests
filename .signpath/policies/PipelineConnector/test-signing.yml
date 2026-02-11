@@ -1,2 +1,2 @@
 github-actions-policies:
-  key: value
+  key: value-from-scm-repo
