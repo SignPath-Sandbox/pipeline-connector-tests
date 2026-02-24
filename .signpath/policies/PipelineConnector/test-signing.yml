@@ -1,2 +1,5 @@
 github-actions-policies:
-  disallow_reruns: true
+  disallow_reruns: false
+  allowed_groups:
+    - GitHub Actions
+    - github actions
