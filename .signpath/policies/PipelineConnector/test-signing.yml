@@ -1,2 +1,2 @@
 github-actions-policies:
-  disable_reruns: true
+  disallow_reruns: true
