@@ -3,4 +3,4 @@ github-actions-policies:
   runners:
     require_github_hosted: true
     allowed_groups:
-      - myCustomGtoup
+      - GitHub Actions
