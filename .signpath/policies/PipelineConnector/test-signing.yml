@@ -10,4 +10,4 @@ github-scm-policies:
   - enforced_from: 2025-01-01
     allow_bypass_actors: false
     rules:
-    - required_signatures
+    - type: required_signatures
