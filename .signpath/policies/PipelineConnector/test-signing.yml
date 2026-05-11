@@ -7,7 +7,7 @@ github-actions-policies:
 
 github-scm-policies:
   ruleset_constraints:
-    enforced_from: 2025-01-01
+  - enforced_from: 2025-01-01
     allow_bypass_actors: false
     rules:
     - required_signatures
