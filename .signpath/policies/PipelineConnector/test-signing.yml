@@ -7,7 +7,7 @@ github-actions-policies:
 
 github-scm-policies:
   ruleset_constraints:
-  - enforced_from: CURRENT_BUILD
+  - enforced_from: 2026-05-15
     allow_bypass_actors: true
     rules:
     - type: required_signatures
