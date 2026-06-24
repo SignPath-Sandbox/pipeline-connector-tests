@@ -8,6 +8,6 @@ github-build-policies:
 github-scm-policies:
   ruleset_constraints:
   - enforced_from: CURRENT_BUILD
-    allow_bypass_actors: true
+    allow_bypass_actors: false
     rules:
     - type: required_signatures
