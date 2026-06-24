@@ -1,4 +1,4 @@
-github-actions-policies:
+github-build-policies:
   disallow_reruns: false
   runners:
     require_github_hosted: true
