@@ -7,7 +7,7 @@ github-build-policies:
       - GitHub Actions
 
 github-scm-policies:
-  version: 2.0
+  version: 1.0
   ruleset_constraints:
   - enforced_from: CURRENT_BUILD
     allow_bypass_actors: false
