@@ -1,11 +1,13 @@
 github-build-policies:
   disallow_reruns: false
+  version: 1.0
   runners:
     require_github_hosted: true
     allowed_groups:
       - GitHub Actions
 
 github-scm-policies:
+  version: 2.0
   ruleset_constraints:
   - enforced_from: CURRENT_BUILD
     allow_bypass_actors: false
