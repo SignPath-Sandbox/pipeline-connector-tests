@@ -1,4 +1,4 @@
-name: workflow
+name: Sign PowerShell Script
 
 on:
     workflow_dispatch:
