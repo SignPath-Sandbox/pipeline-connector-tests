@@ -38,9 +38,9 @@ jobs:
             connector-url: ${{ env.CONNECTOR_URL }}/GitHubActions/${{ env.ENDPOINT_KEY }}
             api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
             organization-id: ${{ env.ORG_ID }}
-            project-slug: PipelineConnector
+            project-slug: test-signing # PipelineConnector
             # this SigningPolicy has auto-approve enabled, so you don't need to approve the signing request
-            signing-policy-slug: test-signing
+            signing-policy-slug: PipelineConnector # test-signing
             artifact-configuration-slug: initial
             github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
             wait-for-completion: true
