@@ -42,7 +42,7 @@ jobs:
             signing-policy-slug: test-signing
             artifact-configuration-slug: initial
             github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
-            wait-for-completion: true
+            wait-for-completion: false
             output-artifact-directory: ${{ env.OUTPUT_PATH }}
       - name: Upload the signed artifact
         id: upload-signed-artifact-step
