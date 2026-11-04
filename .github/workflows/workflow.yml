@@ -33,10 +33,10 @@ jobs:
           archive: true
       - name: Run submit signing request
         id: submit_with_download
-        uses: signpath/github-action-submit-signing-request@feature/SIGN-8978
+        uses: signpath/github-action-submit-signing-request@v3
         with:
             connector-url: ${{ env.CONNECTOR_URL }}/GitHubActions/${{ env.ENDPOINT_KEY }}
-            api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+            api-token: 'balbbla' # '${{ secrets.SIGNPATH_API_TOKEN }}'
             organization-id: ${{ env.ORG_ID }}
             project-slug: PipelineConnector
             signing-policy-slug: test-signing
