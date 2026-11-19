@@ -3,12 +3,6 @@ name: Sign PowerShell Script
 on:
     workflow_dispatch:
     
-# permissions: 
-#     actions: read
-#     contents: read
-#     artifact-metadata: read
-#     repository-projects: read
-
 env:
   CONNECTOR_URL: https://pipelineconnector-iqa.connectors.dev.signpath.io:15001
   # CONNECTOR_URL: https://githubactions.connectors.signpath.io
@@ -39,7 +33,7 @@ jobs:
             api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
             organization-id: ${{ env.ORG_ID }}
             project-slug: PipelineConnector
-            signing-policy-slug: test-signing
+            signing-policy-slug: kaputt # test-signing
             artifact-configuration-slug: initial
             github-artifact-id: '${{ steps.upload-artifact-step.outputs.artifact-id }}'
             wait-for-completion: true
